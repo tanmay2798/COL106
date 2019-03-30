@@ -1,0 +1,94 @@
+package final_submission;
+
+public class MyStack <E> {	
+	E object;
+	MyStack<E> next;
+	MyStack<E> adder = null;
+	public MyStack() {
+		adder=null;		
+	}
+	
+	public void push(E item) {
+		MyStack<E> in = new MyStack<>();
+		in.object=item;
+		if(adder==null) {
+			adder=in;
+		}else {
+			in.next=adder;
+			adder = in;
+		}
+	}
+
+	public E pop() throws EmptyStackException {
+		MyStack <E> in1 = new MyStack<>();
+		E in2;
+		if(adder==null) {
+			throw new EmptyStackException();
+		}
+		in1=adder.next;
+		in2=adder.object;
+		adder.object=null;
+		adder.next=null;
+		adder=in1;
+		return in2;		
+	}
+
+	public E peek() throws EmptyStackException{
+		if(adder==null) {
+			throw new EmptyStackException();
+		}
+		return adder.object;
+	}
+
+	public boolean empty() {		
+		if(adder==null) {
+		//	System.out.println("true");
+			return true;
+		}
+		else {
+		//	System.out.println("false");
+			return false;
+		}
+	}
+
+	public static void main(String[] args) {
+
+		MyStack <Integer> iObj = new MyStack<Integer>();
+		try {
+			iObj.push(1);
+			iObj.push(2);
+			iObj.push(3);
+			iObj.push(4);
+			iObj.push(5);
+			System.out.println(iObj.pop()+"hi");
+			iObj.pop();
+			iObj.push(6);
+			iObj.pop();
+			iObj.pop();
+			iObj.push(7);
+			iObj.push(8);
+			iObj.push(9);
+			
+			//System.out.println(iObj.size());
+
+		}catch(EmptyStackException e) {
+			System.out.println(e) ;
+		}
+		iObj.empty();
+		System.out.println("list");
+		iObj = iObj.adder;
+		while(true){
+			if(iObj == null){
+				break;
+			}
+			System.out.println(iObj.object);
+			iObj = iObj.next;
+		}
+		
+	}
+}
+class EmptyStackException extends Exception{
+	EmptyStackException(){
+		super();
+	}
+}
