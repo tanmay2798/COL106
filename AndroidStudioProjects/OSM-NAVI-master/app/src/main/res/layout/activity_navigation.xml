@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1"
+    android:orientation="vertical"
+    android:id="@+id/myLayout"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="khushboo.rohit.osmnavi.MainActivity">
+    <!--android:paddingBottom="5sp"-->
+    <!--android:paddingTop="5sp"-->
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="match_parent"
+        android:layout_height="10dp"
+        android:layout_weight="30" />
+    <Button
+        android:id="@+id/buttonNext"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="match_parent"
+        android:contentDescription="For the next instruction tap this "
+        android:layout_height="43dp"
+        android:layout_weight="30"
+        android:background="#FF296596"
+        android:onClick="onNextButton"
+        android:text="Next Instruction"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp" />
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5sp"
+        android:background="#FFFFF0"/>
+
+
+    <Button
+        android:id="@+id/buttonNearby"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:contentDescription="Nearby points of interest "
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="30"
+        android:background="#FF296596"
+        android:onClick="nearbyPOI"
+        android:text="Nearby P O I"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp" />
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5sp"
+        android:background="#FFFFF0"/>
+
+
+    <Button
+        android:layout_height="30dp"
+        android:layout_weight="30"
+        android:background="#FF296596"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:id="@+id/button"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:layout_width="match_parent"
+        android:onClick="changeLayout"
+        android:contentDescription="To enter a landmark, tap this "
+        android:text="Add Landmark"
+        />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5sp"
+        android:background="#FFFFF0"/>
+
+    <Button
+        android:layout_height="30dp"
+        android:layout_weight="30"
+        android:background="#FF296596"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp"
+        android:layout_width="match_parent"
+        android:text="Save route"
+        android:contentDescription="To save this route, tap this "
+        android:id="@+id/button_save"
+        android:onClick="onSaveButton"
+        style="@android:style/Widget.Holo.Light.Button.Toggle" />
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="5sp"
+        android:background="#FFFFF0" />
+
+    <Button
+        android:id="@+id/button8"
+        style="@android:style/Widget.Holo.Light.Button.Toggle"
+        android:contentDescription="Stop Button. To Stop Navigating tap this "
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:layout_weight="30"
+        android:background="#FF296596"
+        android:onClick="onStartButton"
+        android:text="Stop"
+        android:textColor="#FFFFFF"
+        android:textSize="40sp" />
+
+</LinearLayout>

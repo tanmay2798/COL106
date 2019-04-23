@@ -57,7 +57,6 @@ public class Compress {
 				code[j++] = (byte) ((Integer.parseInt(arr2.get(i),2)>>8)); // 0 is the signed 8-bit value of 00000000
 				code[j++] =(byte) (Integer.parseInt(arr2.get(i),2) & 0xff);// -128 is the signed 8-bit value of 1000000
 			}
-
 			try {
 				os.write(code);
 			} catch (IOException e) {
@@ -68,12 +67,8 @@ public class Compress {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-
-
-
 		System.out.println(dictionary);
 	}
-
 	public static int getkey(String s) {
 		if(s.length()==1)
 			return getindex(((long)s.charAt(0)));
