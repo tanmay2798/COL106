@@ -1,0 +1,4 @@
+#Sun Jan 06 18:56:31 IST 2019
+base.0=/Users/tanmaygoyal/Desktop/SURA/android code/Application/build/intermediates/transforms/dexMerger/debug/0
+path.0=classes.dex
+renamed.0=classes.dex
